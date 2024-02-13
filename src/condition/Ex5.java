@@ -18,5 +18,17 @@ public class Ex5 {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("아이디(ID) : ");
+        String enteredUsername = scanner.nextLine();
+
+        System.out.println("비밀번호(PASSWORD) : ");
+        String enteredPassword = scanner.nextLine();
+
+        if (validUsername.equals(enteredUsername) && validPassword.equals(enteredPassword)) {
+            System.out.println("로그인 성공 :)");
+        } else {
+            System.out.println("로그인 실패: (\n아이디(ID) 혹은 비밀번호(PASSWORD)가 잘못되었습니다. \n다시 시도해주시기를 바랍니다.");
+        }
+
     }
 }

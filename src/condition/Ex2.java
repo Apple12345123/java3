@@ -28,3 +28,10 @@ public class Ex2 {
 
     }
 }
+        /*if (month == 12 || month == 1 || month == 2) {
+        System.out.println("겨울");
+        } else if (3 <= month && month <= 5) {
+        System.out.println("봄");
+        }*/
+
+

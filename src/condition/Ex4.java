@@ -21,8 +21,29 @@ public class Ex4 {
         System.out.print("연산자를 입력하세요: ");
         String operator = scanner.next();
 
-        double result;
+        double result = 0;
 
         // ...
+        switch (operator) {
+            case "+":
+                result = first + second;
+                break;
+            case "-":
+                result = first - second;
+                break;
+            case "*":
+                result = first * second;
+                break;
+            case "/":
+                result = first / second;
+                if (second == 0) {
+                    System.out.println("0으로 나눌 수 없습니다.");
+                    return;
+                }
+                break;
+
+        }
+
+        System.out.println("결과는 = " + result);
     }
 }

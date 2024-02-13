@@ -36,9 +36,9 @@ public class Ex3 {
         if (hour <= 2) {
             fee = 5000;
         } else if ( hour <= 24) {
-            fee = 5000 + ((hour - 2) * 2) * 1000;
+            fee = 5000 + ((hour - 2) / 0.5) * 1000;
         } else {
-            fee = 3000;
+            fee = 30000;
         }
         System.out.println("fee = " + fee);
     }
