@@ -22,7 +22,7 @@ public class Ex7 {
         while (b != 0) {
             int temp = b;   // 이전 b값을 임시 변수에 보관
             b = a % b;     // 나머지를 다시 b에 대입한다. 나머지가 있으면 계속 나눈다.
-            a = temp;     // 이전 b 값을 a에 대입
+            a = temp;      // 이전 b 값을 a에 대입
         }
 
         gcd = a;        //최대공약수

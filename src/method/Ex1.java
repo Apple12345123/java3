@@ -4,17 +4,14 @@ import java.util.Scanner;
 
 public class Ex1 {
     public static void main(String[] args) {
-        // 두 수를 입력받아 뺄셈을 하는 메서드를 만들어주세요.
+        // 두 수를 입력받아 뺼셈을 하는 메서드를 만들어주세요.
+        int num = sub(10, 5);   // 메서드를 호출하면 리턴값을 반홚나다.
+        System.out.println(num);     // 별도로 출력문 수행
+        System.out.println(sub(10, 5));
+    }
 
-        System.out.println("뺄셈을 위한 두 수를 입력해주세요");
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("첫 번째 숫자: ");
-        int a = scanner.nextInt();
-        System.out.print("두 번째 숫자: ");
-        int b = scanner.nextInt();
-
-        int sum = a - b;
-        System.out.println("결과는 : " + sum);
+    public static int sub(int a, int b) {
+        return a - b;   // 변수에 담을 필요가 없을 경우 inline으로 리턴
     }
 }
+
