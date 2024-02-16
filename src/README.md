@@ -63,3 +63,9 @@
   - setEmployeeName : 직원의 이름을 설정하는 메서드
 - 일반적으로 널리 사용되지 않는 약어는 사용하지 않는 것이 좋다.
   - addN, getSi, setEn <- 무슨 동작을 하는 메서드인지 추측하기 어렵다. 
+## 클래스 
+- 객체(Object)와 인스턴스(Instance)의 차이 
+   - 클래스에서 나온 실체. 인스턴스는 클래스의 관계에 맞춰져있음.
+   - Student는 클래스다.
+   - student1은 Student의 인스턴스다.
+   - stdent1은 객체다.
