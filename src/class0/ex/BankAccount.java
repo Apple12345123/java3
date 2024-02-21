@@ -5,12 +5,12 @@ public class BankAccount {
     String ownerName;
     long balance;
 
-    long deposit(int amount) {
+    public long deposit(int amount) {
         balance += amount;
         System.out.println(amount + "원을 입금했습니다. 잔액은 " + balance + "원입니다.");
         return balance;
     }
-    long withdraw(int amount) {
+    public long withdraw(int amount) {
         if (balance < amount) {
             System.out.println("출금을 할 수 없습니다.");
         } else {
@@ -19,7 +19,7 @@ public class BankAccount {
         }
         return balance;
     }
-    long getBalance() {
+    public long getBalance() {
         System.out.println("잔액은 " + balance + "원입니다.");
         return balance;
     }
