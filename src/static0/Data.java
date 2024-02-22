@@ -11,4 +11,7 @@ public class Data {
 
     // 게터 메서드
     public int getField() { return field; }
+
+    // 세터 메서드
+    public void setField(int field) {this.field = field; }
 }
