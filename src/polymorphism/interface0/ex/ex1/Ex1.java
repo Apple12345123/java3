@@ -27,16 +27,22 @@ package polymorphism.interface0.ex.ex1;
      */
 public class Ex1 {
     public static void main(String[] args) {
-        CDPlayer cdPlayer = new CDPlayer();
-        MP3Player mp3Player = new MP3Player();
-
+        Playable cdPlayer = new CDPlayer();
         cdPlayer.play();
         cdPlayer.pause();
         cdPlayer.stop();
 
+        Playable mp3Player = new MP3Player();
         mp3Player.play();
         mp3Player.pause();
         mp3Player.stop();
 
+        // 배열 사용한 경우
+        Playable[] players = {new MP3Player(), new CDPlayer()};
+        for (Playable player : players) {
+            player.play();
+            player.pause();
+            player.stop();
+        }
     }
 }

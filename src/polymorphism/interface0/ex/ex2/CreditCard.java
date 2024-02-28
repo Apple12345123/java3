@@ -1,13 +1,9 @@
 package polymorphism.interface0.ex.ex2;
 
 public class CreditCard implements Payment{
-    @Override
-    public void pay() {
-
-    }
 
     @Override
-    public void pay(int cost) {
-
+    public void pay(long amount) {
+        System.out.println("신용카드로 " + amount + "원 결제하셨습니다.");
     }
 }

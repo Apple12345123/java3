@@ -1,5 +1,6 @@
 package polymorphism.interface0.car.poly;
 
+// Car 역할을 구현한 구현 클래스 (상세사항, Detail)
 public class Avante implements Car{
     public void onEngine() {
         System.out.println("아반떼 엔진을 켭니다.");
