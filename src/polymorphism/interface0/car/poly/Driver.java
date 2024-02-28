@@ -23,12 +23,12 @@ public class Driver {
         if (avante !=null) {
             avante.onEngine();
             avante.pressAccel();
-            avante.pressBread();
+            avante.pressBreak();
             avante.offEngine();
         } else if (sonata != null) {
             sonata.onEngine();
             sonata.pressAccel();
-            sonata.pressBread();
+            sonata.pressBreak();
             sonata.offEngine();
         }
 
