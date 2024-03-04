@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class Exception {
+public class Exception1 extends Throwable {
     public static void main(String[] args) {
         // 모든 발생할 수 있는 문제 클래스의 조상
         Throwable throwable;        // ctrl + b 누르면
@@ -13,7 +13,7 @@ public class Exception {
         // 1. 에러
         Error error;
         // 2. 예외
-        Exception exception;
+        Exception1 exception;
 
         // 예외는 2가지 종류로 나뉜다.
         // 1. checked Exception

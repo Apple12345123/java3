@@ -5,9 +5,9 @@ public class Try3 {
 
         int[] numbers = {1, 2, 3};
         try {
+            int divedNumber = 10 / 0;
             int number = numbers[3];        // 0부터 시작하기 때문에 오류  ArrayIndexOutOfBoundsException
             // 예외가 발생할 경우 이후 코드 구문 실행하지 않고, catch 블록으로 넘어간다.
-            int divedNumber = 10 / 0;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("인텍스 범위 초과했습니다." + e.getMessage());
         } catch (ArithmeticException e) {
