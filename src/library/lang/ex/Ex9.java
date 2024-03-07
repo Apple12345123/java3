@@ -1,5 +1,7 @@
 package library.lang.ex;
-/*
+
+public class Ex9 {
+    /*
     실습 문제: 문자열 정보 처리 및 분석
 
     요구사항:
@@ -20,44 +22,50 @@ package library.lang.ex;
 
     출력 예시
     ===
-    문자열 길이: 24
-    공백 수: 3
-    각 부분 문자열 길이: [13, 8, 2]
+    문자열 길이: 21
+    공백 수: 4
+    각 부분 문자열 길이: [10, 9]
     "Java" 포함 여부: true
     "프로그래밍"으로 끝나는가: false
     "a" 문자의 수: 2
      */
-public class Ex9 {
     public static void main(String[] args) {
-        String sentences = "오늘은 Java 수업 19일차 입니다.";
+        String input = "Java 프로그래밍, 문자열 처리 연습";
 
-        String[] sentenceArray = sentences.split(" ");
-        for (String sentence : sentenceArray) {
-            System.out.println(sentence);
+        // 1.
+        System.out.println("문자열 길이 : " + input.length());
+
+        // 2.
+        int whiteSpaceCount = 0;
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == ' ') {
+                whiteSpaceCount++;
+            }
         }
 
-        //문자열 길이
-        int l1 = sentences.length();
-        System.out.println("문자열 길이: " + l1);
+        System.out.println("공백 수 : " + whiteSpaceCount);
 
-        // 공백 수
+        // 3. 부분 문자열 길이
+        System.out.print("부분 문자열의 길이 : [");
+        String[] split = input.split(",");
 
-        // 각 부분 문자열 길이
+        for (int i = 0; i < split.length; i++) {
+            System.out.print(split[i].trim().length());
+            if (i != split.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
 
+        // 4. "Java" 포함 여부: true
+        System.out.println("\"Java\" 포함 여부: " + input.contains("Java"));
+        // 5. "프로그래밍"으로 끝나는가: false
+        System.out.println("\"프로그래밍\"으로 끝나는가: " + input.endsWith("프로그래밍"));
+        // 6. "a" 문자의 수: 2
+        // a문자의 수 : 전체 길이의 수 - a를 제외한 수
+        // 대문자A와 소문자a 모두 세어야 할 경우
+        int countA = input.toLowerCase().length() - input.toLowerCase().replace("a", "").length();
+        System.out.println("\"a\" 문자의 수: " + countA);
 
-        // java 포함여부
-        boolean java = sentences.contains("java");
-        System.out.println("Java 포함여부 : " + java);
-
-        // 프로그래밍으로 끝나는가
-        boolean b2 = sentences.endsWith("프로그래밍");
-        System.out.println("프로그래밍으로 끝나는가: " + b2);
-
-        // a 문자의 수
-        int aCount = sentences.length();
-        int aCount2 = sentences.replace("a", "").length();
-
-        int aCount3 = aCount - aCount2;
-        System.out.println("a 문자의 수 : " + aCount3);
     }
 }
