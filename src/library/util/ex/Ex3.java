@@ -1,4 +1,8 @@
 package library.util.ex;
+
+import javax.crypto.spec.PSource;
+import java.util.Scanner;
+
 /*
 연습 문제 1: 이자 계산기
 
@@ -18,4 +22,14 @@ package library.util.ex;
 최종 금액: 1628.89
  */
 public class Ex3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("원금을 입력해주세요.");
+        int Principal = scanner.nextInt();
+
+
+
+    }
+
+
 }
