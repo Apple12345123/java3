@@ -1,6 +1,7 @@
 package library.util.ex;
 
 import javax.crypto.spec.PSource;
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 /*
@@ -25,10 +26,24 @@ public class Ex3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("원금을 입력해주세요.");
-        int Principal = scanner.nextInt();
+        BigDecimal principal = scanner.nextBigDecimal();
 
+        System.out.println("연이율을 입력해주세요.");
+        BigDecimal annualInterestRate = scanner.nextBigDecimal();
 
+        System.out.println("기간을 입력해주세요.(년 단위)");
+        int year = scanner.nextInt();
 
+        // 최종금액 = 원금 * (1 + 연이율)^기간
+        // int i = principal * (1+ annualInterestRate ^ year;  => X
+
+        // annualInterestRate.add(new BigDecimal("1"));  => O  또는
+        BigDecimal finalResult = principal       // 원금에다가
+                .multiply(BigDecimal.ONE        // 곱하고
+                        .add(annualInterestRate)    // 더하고
+                        .pow(year));            // 제곱한다.
+
+        System.out.printf("최종금액 : %,.2f원",finalResult);  // .2 = 소수점 2자리 수까지만 남겨줬으면 좋겠어.
     }
 
 
