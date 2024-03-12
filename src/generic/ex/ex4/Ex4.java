@@ -1,5 +1,8 @@
 package generic.ex.ex4;
 
+import generic.ex.ex5.Book;
+import generic.ex.ex5.Movie;
+
 /*
 연습 문제: 제네릭 다형성을 활용한 미디어 라이브러리
 

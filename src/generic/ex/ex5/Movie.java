@@ -1,6 +1,6 @@
-package generic.ex.ex4;
+package generic.ex.ex5;
 
-public class Movie implements Media {
+public class Movie implements Media{
     String title;
     String director;
 
@@ -12,5 +12,10 @@ public class Movie implements Media {
     @Override
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public String getDetail() {
+        return "Director : " + director;
     }
 }
