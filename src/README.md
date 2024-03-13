@@ -91,7 +91,7 @@
     - LocalDateTime, LocalDate, LocalTime
     - Period, Duration, DateTimeFormatter
 26. 제네릭
-    - <T> 타입 파라미터를 정의하여 타입이 필요한 자리에 유연한 타입 제공.
+    - <T> 타입 파라미터를 정의하여 타입이 필요한 자리에 유연한 타입 제공
     - 제네릭 클래스, 제네릭 메서드(리턴 타입 앞에 선언)
     - 제한된 타입 파라미터 <T extends 타입>
     - 와일드 카드 <? extends 타입> <? super 타입>
@@ -362,9 +362,23 @@
             2. Unchecked Exception : 실행 시점(Runtime)에 발생하는 예외.
                 - 주로 RuntimeException 클래스에서 상속받음.
 ## Generic의 장점
-    1. 타입 안전성(Type Safety)를 가짐
-        - 컴파일 시점에 타입 체크를 수행할 수 있어, ClassCastException을 방지
-    2. 코드 재사용성이 향상
-        - 다양한 타입의 데이터에 대해 재사용 가능하여, 코드의 양을 줄인다.
-    3. 타입 캐스팅 감소
-        - 캐스팅 연산자를 사용하지 않아서 깔끔하고 가독성 향상
+1. 타입 안전성(Type Safety)를 가짐
+   - 컴파일 시점에 타입 체크를 수행할 수 있어, ClassCastException을 방지
+2. 코드 재사용성이 향상
+   - 다양한 타입의 데이터에 대해 재사용 가능하여, 코드의 양을 줄인다.
+3. 타입 캐스팅 감소
+   - 캐스팅 연산자를 사용하지 않아서 깔끔하고 가독성 향상
+
+## TreeSet, Comparable, Comparator
+  - TreeSet : Red-Black tree 자료 구조를 사용하여 요소를 자동 정렬하여 저장
+    - 고성능 검색 : Binary Search(이진 검색 적용), 시간 복잡도 0(log n)
+    - TreeSet에 저장되는 요소는 항상 비교가 가능해야 한다. (Comparable)
+    - Comparable 인터페이스가 구현되거나, 생성자에 정렬자 비교자 Comparator가 제공되어야 함.
+  - Comparable 
+    - 자연스러운 순서를 정의하기 위해, 클래스 내부에 구현
+    - 구현된 클래스들 : 기본 타입의 포장 클래스, 문자열 클래스, 날짜 및 시간 클래스, 파일 클래스 등
+    - 구현된 compareTo 메서드를 사용
+  - Comparator
+    - 객체 외부에 구현될 수 있고, 다양한 정렬 기준을 적용할 수 있음.
+    - sort() 등의 메서드에 정렬 로직을 제공할 때 사용
+    - 람다식 또는 메서드 참조 등으로 간결하게 사용할 수 있음.

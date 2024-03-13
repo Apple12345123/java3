@@ -1,4 +1,9 @@
 package collection.list.ex.ex4;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /*
      연습문제
      간단한 투표 시스템
@@ -63,4 +68,44 @@ package collection.list.ex.ex4;
      - printResults() 메서드에서 최종 투표 결과를 출력합니다.
 */
 public class Ex4 {
+    public static void main(String[] args) {
+        List<String> candidate = new ArrayList<>();     // 후보 정보
+        List<Integer> votes = new ArrayList<>();     // 투표 받은 수
+
+        // 후보 목록 등록 (초기화)
+        candidate.add("고길동");
+        candidate.add("둘리");
+        candidate.add("마이콜");
+        candidate.add("희동이");
+
+        // 투표 받은 수 초기화
+        for (int i = 0; i < candidate.size() ; i++) {
+            votes.add(0);
+        }
+        // 후보목록 출력하기
+        for (int i = 0; i < candidate.size(); i++) {
+            System.out.println(i+1 + ". "+ candidate.get(i));
+        }
+        // 투표 받기
+        Scanner scanner= new Scanner(System.in);
+        while (true) {
+            System.out.print("투표하고 싶은 번호를 입력하세요. 종료는 0 >");
+            int choice = scanner.nextInt();
+
+            // 0이면 투표 종료하기
+            if (choice == 0) break;
+            else if (choice > 0 && choice <= candidate.size()){
+                // 투표 카운트하기
+                Integer vote = votes.get(choice - 1);  // 투표 수 가져오기 (-1 이유 : 인덱스 주의)
+                votes.set(choice - 1, vote + 1);
+            } else {
+                System.out.println("번호를 잘못 입력하였습니다.");
+            }
+        }
+        System.out.println("투표결과 : ");
+        for (int i = 0; i < candidate.size(); i++) {
+            System.out.printf("%s : %d   " , candidate.get(i), votes.get(i));
+        }
+
+    }
 }
