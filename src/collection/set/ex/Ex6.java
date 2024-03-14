@@ -1,6 +1,7 @@
 package collection.set.ex;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.TreeSet;
 
 public class Ex6 {
@@ -36,26 +37,26 @@ public class Ex6 {
     "예약 시간: 2023-10-10T12:00, 회의실, 홍길동"
     "예약 시간: 2023-10-10T15:00, 회의실, 홍길서"
     "예약 시간: 2023-10-11T10:00, 회의실, 홍길남"
-
      */
     public static void main(String[] args) {
         TreeSet<Reservation> reservationTreeSet = new TreeSet<>();
 
-        reservationTreeSet.add(new Reservation(
-                LocalDateTime.of(2024, 03, 13, 11, 00),
-                "홍길동",
-                "회의실A"
-        ));
-        reservationTreeSet.add(new Reservation(
-                LocalDateTime.of(2024, 03, 13, 9, 00),
-                "홍길서",
-                "회의실B"
-        ));
-        reservationTreeSet.add(new Reservation(
-                LocalDateTime.of(2024, 03, 12, 23, 00),
-                "홍길서",
-                "회의실C"
-        ));
+        String str1 = "2023년 10월 10일 12시 00분 시작";
+        String str2 = "2023년 10월 10일 10시 00분 시작";
+        String str3 = "2023년 10월 11일 10시 00분 시작";
+        String str4 = "2023년 10월 10일 15시 00분 시작";
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH시 mm분 시작");
+
+        LocalDateTime dt1 = LocalDateTime.parse(str1, formatter);
+        LocalDateTime dt2 = LocalDateTime.parse(str2, formatter);
+        LocalDateTime dt3 = LocalDateTime.parse(str3, formatter);
+        LocalDateTime dt4 = LocalDateTime.parse(str4, formatter);
+
+        reservationTreeSet.add(new Reservation(dt1, "홍길동", "회의실"));
+        reservationTreeSet.add(new Reservation(dt2, "홍길서", "회의실"));
+        reservationTreeSet.add(new Reservation(dt3, "홍길서", "회의실"));
+        reservationTreeSet.add(new Reservation(dt4, "홍길남", "회의실"));
 
         for (Reservation reservation : reservationTreeSet) {
             System.out.println(reservation);
