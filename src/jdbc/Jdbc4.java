@@ -2,7 +2,6 @@ package jdbc;
 
 import java.sql.*;
 import java.util.Date;
-
 public class Jdbc4 {
     // try-with-resources 구문으로 자원 정리하기
     public static void main(String[] args) {

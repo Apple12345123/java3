@@ -76,6 +76,5 @@ public class Ex2 {
             throw new RuntimeException(e);
         }
 
-
     }
 }

@@ -8,6 +8,7 @@ public class Jdbc3 {
         String user = "root";       // 사용자이름
         String password = "1234";   // 비밀번호
 
+
         // 연결객체
         Connection conn = null;
         // 실행문 객체

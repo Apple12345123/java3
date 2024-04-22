@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 public class Jdbc9 {
     // 데이터 수정 Update
     public static void main(String[] args) {

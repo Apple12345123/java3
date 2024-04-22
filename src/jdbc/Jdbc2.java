@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Jdbc2 {
+
     // 데이터베이스 연결하기
     public static void main(String[] args) {
         // URL (jdbc:서브프로토콜://호스트이름:포트번호/데이터베이스이름)

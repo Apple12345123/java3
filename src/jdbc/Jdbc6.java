@@ -1,7 +1,6 @@
 package jdbc;
 
 import java.sql.*;
-
 public class Jdbc6 {
     // PreparedStatement : 동적 쿼리
     public static void main(String[] args) {

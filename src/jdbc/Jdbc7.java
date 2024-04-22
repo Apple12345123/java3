@@ -21,6 +21,7 @@ public class Jdbc7 {
                     VALUES (?, ?, ?, ?, ?)
                     """;
 
+
             // ? 위치 = Index, 값은 타입에 맞게 지정
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, "summer");

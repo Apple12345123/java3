@@ -9,3 +9,4 @@ public class Ex4 {
     - 해당 userId를 가진 사용자의 데이터를 users 테이블에서 삭제합니다.
      */
 }
+
